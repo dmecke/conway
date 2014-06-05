@@ -1,0 +1,85 @@
+a {
+	color:#fee;
+	text-decoration:none;
+}
+
+a:hover {
+	color:#996;
+	text-decoration:none;
+}
+
+.active {
+	color:#996;
+}
+
+.link {
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:.8em;
+	color:#000;
+	padding-bottom:10px;
+}
+
+.link:hover {
+	color:#996;
+}
+
+#screen {
+	position:absolute;
+	top:320px;
+	left:50%;
+	margin-left:-202px;
+}
+
+p {
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:14pt;
+	width:356px;
+	margin-left:44px;
+}
+
+#board {
+	border-collapse:collapse;
+	width:400px;
+}
+
+td {
+	height:10px;
+	width:7px;
+}
+
+a {
+	text-decoration:none;
+}
+
+.white {
+	border-style:solid;
+	border-color:#cc9;
+	border-width:1px;
+	background-color:#fbfbfb;
+}
+
+.grey {
+	border-style:solid;
+	border-color:#cc9;
+	border-width:1px;
+	background-color:#fcf0d8;
+}
+
+.black {
+	border-style:solid;
+	border-color:#cc9;
+	border-width:1px;
+	background-color:#666666;
+}
+
+.button {
+	background-color:#fbfbfb;
+	color:#000;
+	border:1px solid #cc9;
+	height:20px;
+	font-family:Verdana,Geneva,sans-serif;
+	font-size:8pt;
+	padding:6px;
+	margin-right:3px;
+}
+
