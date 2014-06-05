@@ -5,7 +5,7 @@
         versionCode = "10"
         version     = "1.0.0" >
 
-    <name>Onlinetennis</name>
+    <name>Conway</name>
 
     <description>Conway</description>
     <preference name="phonegap-version" value="3.1.0" />
