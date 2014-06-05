@@ -1,3 +1,6 @@
+body {
+    margin: 0;
+}
 a {
 	color:#fee;
 	text-decoration:none;
@@ -23,13 +26,6 @@ a:hover {
 	color:#996;
 }
 
-#screen {
-	position:absolute;
-	top:320px;
-	left:50%;
-	margin-left:-202px;
-}
-
 p {
 	font-family:Verdana,Geneva,sans-serif;
 	font-size:14pt;
@@ -38,13 +34,12 @@ p {
 }
 
 #board {
-	border-collapse:collapse;
-	width:400px;
+	border-collapse: collapse;
+    width: 100%;
 }
 
 td {
 	height:10px;
-	width:7px;
 }
 
 a {
@@ -83,3 +78,12 @@ a {
 	margin-right:3px;
 }
 
+
+
+
+
+.menu_paused {
+}
+.menu_active {
+    display: none;
+}
