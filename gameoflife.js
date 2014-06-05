@@ -11,17 +11,30 @@ function setup()
         setCellDead(i);
     }
     showMessage('Click to place living cells.');
-    show();
+    initializeScreen();
 }
 
 function show()
+{
+    for (var y = 0; y < 40; y++) {
+        for (var x = 0; x < 40; x++) {
+            var currentStatus = $('#index_' + (y * 40 + x)).attr('class');
+            var newStatus = cell[y * 40 + x].status;
+            if (currentStatus != newStatus) {
+                $('#index_' + (y * 40 + x)).attr('class', newStatus);
+            }
+        }
+    }
+}
+
+function initializeScreen()
 {
     var board = '';
     board += '<table id="board">';
     for (var y = 0; y < 40; y++) {
         board += '<tr>';
         for (var x = 0; x < 40; x++) {
-            board += cell[y * 40 + x].html;
+            board += getCell(cell[y * 40 + x].status, y * 40 + x);
         }
         board += '</tr>';
     }
@@ -95,7 +108,7 @@ function findNeighboursAlive()
 function faster()
 {
     if (speed[0] != 100) {
-        speed.unshift(speed[speed.length-1]);
+        speed.unshift(speed[speed.length - 1]);
         speed.length--;
         window.clearInterval(interval);
         interval = window.setInterval(step, speed[0]);
@@ -104,7 +117,7 @@ function faster()
 
 function slower()
 {
-    if (speed[0]!=2000) {
+    if (speed[0] != 2000) {
         speed.push(speed[0]);
         speed.shift();
         window.clearInterval(interval);
@@ -140,7 +153,7 @@ function random()
 
 function getCell(color, index)
 {
-    return '<td class="' + color + '" onclick="draw(' + index + ')"><\/td>';
+    return '<td id="index_' + index + '" class="' + color + '" onclick="draw(' + index + ')"><\/td>';
 }
 
 function showMessage(message)
@@ -151,23 +164,23 @@ function showMessage(message)
 function setCellAlive(index)
 {
     cell[index] = {
-        html: '<td class="alive"></td>',
-        alive: true
+        alive: true,
+        status: 'alive'
     }
 }
 
 function setCellDead(index)
 {
     cell[index] = {
-        html: getCell('dead', index),
-        alive: false
+        alive: false,
+        status: 'dead'
     }
 }
 
 function setCellWasAlive(index)
 {
     cell[index] = {
-        html: getCell('wasAlive', index),
-        alive: false
+        alive: false,
+        status: 'wasAlive'
     }
 }
