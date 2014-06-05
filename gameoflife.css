@@ -1,88 +1,22 @@
 body {
     margin: 0;
 }
-a {
-	color:#fee;
-	text-decoration:none;
-}
-
-a:hover {
-	color:#996;
-	text-decoration:none;
-}
-
-.active {
-	color:#996;
-}
-
-.link {
-	font-family:Verdana,Geneva,sans-serif;
-	font-size:.8em;
-	color:#000;
-	padding-bottom:10px;
-}
-
-.link:hover {
-	color:#996;
-}
-
-p {
-	font-family:Verdana,Geneva,sans-serif;
-	font-size:14pt;
-	width:356px;
-	margin-left:44px;
-}
-
 #board {
 	border-collapse: collapse;
     width: 100%;
 }
-
 td {
-	height:10px;
+	height: 10px;
+    border: 0;
 }
-
-a {
-	text-decoration:none;
+.dead {
+	background-color:#CBCF80;
 }
-
-.white {
-	border-style:solid;
-	border-color:#cc9;
-	border-width:1px;
-	background-color:#fbfbfb;
+.wasAlive {
+	background-color:#C9CF64;
 }
-
-.grey {
-	border-style:solid;
-	border-color:#cc9;
-	border-width:1px;
-	background-color:#fcf0d8;
-}
-
-.black {
-	border-style:solid;
-	border-color:#cc9;
-	border-width:1px;
-	background-color:#666666;
-}
-
-.button {
-	background-color:#fbfbfb;
-	color:#000;
-	border:1px solid #cc9;
-	height:20px;
-	font-family:Verdana,Geneva,sans-serif;
-	font-size:8pt;
-	padding:6px;
-	margin-right:3px;
-}
-
-
-
-
-
-.menu_paused {
+.alive {
+	background-color:#6D942E;
 }
 .menu_active {
     display: none;
